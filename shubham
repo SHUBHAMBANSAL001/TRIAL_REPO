@@ -1,0 +1,10 @@
+server {
+  listen 80 default_server;
+  listen [::]:80 default_server; 
+    root /var/www/shubham;
+    index page.html; 
+    server_name shubham.com www.shubhamwebsite.com; 
+     location / {
+    try_files $uri $uri/ =404;
+  }
+}
